@@ -1,0 +1,89 @@
+@pxtorem: 37.5;
+@mainColor: #a9936c;
+
+.mcolor() {
+  background: @mainColor;
+}
+
+.bcolor() {
+  background: #f6f6f6;
+}
+
+.fontColorOff() {
+  color: #9F9F9F;
+}
+
+.fontColorOn() {
+  color: @mainColor;
+}
+
+.titleFont() {
+  color: #fdfbef;
+}
+
+
+.w(@px) {
+  width: unit(@px / @pxtorem, rem);
+}
+
+.h(@px) {
+  height: unit(@px / @pxtorem, rem);
+}
+
+.t(@px) {
+  top: unit(@px / @pxtorem, rem);
+}
+
+.r(@px) {
+  right: unit(@px / @pxtorem, rem);
+}
+
+.l(@px) {
+  left: unit(@px / @pxtorem, rem);
+}
+
+.b(@px) {
+  bottom: unit(@px / @pxtorem, rem);
+}
+
+.bg(@bg) {
+  background: @arguments;
+}
+
+.l_h(@px) {
+  line-height: unit(@px / @pxtorem, rem);
+}
+
+.mg(@px) {
+  margin: @arguments;
+}
+
+.pd(@px) {
+  padding: @arguments;
+}
+
+.cl(@cl) {
+  color: @cl;
+}
+
+.dp(@dp) {
+  display: @dp;
+}
+
+.fw(@fw) {
+  font-weight: @fw;
+}
+
+.f_s(@px) {
+  font-size: unit(@px / @pxtorem, rem);
+}
+
+.padtop(@px) {
+  padding-top: unit(@px / @pxtorem, rem);
+}
+
+.padbottom(@px) {
+  padding-bottom: unit(@px / @pxtorem, rem);
+}
+
+@import "./common.less";
