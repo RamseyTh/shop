@@ -15,7 +15,7 @@ export default class Top extends React.Component {
               <Menu.Item>
                 {/* <Link to="/login"> */}
                 <Button danger onClick={this.exitLogin} type="primary">
-                  退出
+                  Log out
                 </Button>
                 {/* </Link> */}
               </Menu.Item>
@@ -23,7 +23,7 @@ export default class Top extends React.Component {
           }
         >
           <a className="ant-dropdown-link" href="#aaa">
-            欢迎登陆
+            Welcome Admin
             <DownOutlined />
           </a>
         </Dropdown>

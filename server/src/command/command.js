@@ -23,9 +23,9 @@ module.exports = class Command {
       });
   }
   /* update Data
-   * @param {object} mod       数据库model
-   * @param {string} _id       数据唯一标识
-   * @param {object} data      更新字段及值
+   * @param {object} mod       
+   * @param {string} _id   
+   * @param {object} data    
    */
   static updateData(mod, _id, data) {
     //change
@@ -55,14 +55,14 @@ module.exports = class Command {
       });
   }
   /* find by page
-   * @param {object} mod       数据库model
-   * @param {number} sort      排序顺序   负数倒序 正数顺序
-   * @param {number} page      当前页数
-   * @param {number} pageSize  分页大小
-   * @param {number} pageSize  关键字模糊查询
+   * @param {object} mod      
+   * @param {number} sort    
+   * @param {number} page    
+   * @param {number} pageSize  
+   * @param {number} pageSize 
    */
   static async findByPage(mod, sort, page, pageSize, keyWord) {
-    
+
     return await mod
       .find(keyWord)
       .sort(sort)

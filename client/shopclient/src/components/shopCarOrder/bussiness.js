@@ -12,7 +12,7 @@ export default class ShopCarOrderBussiness extends Vue {
       item => item.isSelect
     );
     if (!_shopCar.length) {
-      Toast("请选择商品");
+      Toast("Select a product");
       return;
     }
     this.vueComponent.orderList = {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Top :title="isLogin?'我的':'登录'"></Top>
+    <Top :title="isLogin?'My':'Login'"></Top>
     <div class="content">
       <UserInfo v-if="isLogin" :userInfo="userInfo"></UserInfo>
       <Login v-else></Login>

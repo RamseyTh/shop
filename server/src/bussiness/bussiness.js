@@ -113,7 +113,7 @@ module.exports = class Bussiness {
   }
   static isAdmin(res) {
     if (res._data.userTokenType != "admin") {
-      //非管理员
+      //Non-admin user
       res.send({
         result: -999,
         msg: "Please use an administrator account to log in.",

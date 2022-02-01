@@ -1,13 +1,13 @@
-const router = require("express").Router();//路由
-const UserMod = require("../user/mod");//user表联动
-const ShopMod = require("../shopList/mod");//shop表联动
-const Mod = require("./mod");//order表
-const Util = require("../../../utils/utils");//工具类
-const Config = require("../../../config/config");//配置文件
-const Bussiness = require("../../bussiness/bussiness");//接口逻辑
-const { addData, updateData, findData } = require("../../command/command");//数据库操作
+const router = require("express").Router();
+const UserMod = require("../user/mod");
+const ShopMod = require("../shopList/mod");
+const Mod = require("./mod");
+const Util = require("../../../utils/utils");
+const Config = require("../../../config/config");
+const Bussiness = require("../../bussiness/bussiness");
+const { addData, updateData, findData } = require("../../command/command");
 router.post(Config.ServerApi.addOrder, Util.checkToken, async (req, res) => {
-  let userFindRes = await Bussiness.hasUser(req, res, UserMod);//检测用户及地址是否存在
+  let userFindRes = await Bussiness.hasUser(req, res, UserMod);
   if (!userFindRes) {
     return;
   }
@@ -76,12 +76,12 @@ router.get(Config.ServerApi.orderList, Util.checkToken, async (req, res) => {
     res,
     Mod,
     {
-      orderTime: res._data.sort,//时间排序
+      orderTime: res._data.sort,
     },
     {
-      orderId: new RegExp(res._data.orderId, "i"),//orderId（订单号）模糊过滤
-      username: new RegExp(res._data.keyWord, "i"),//订单用户名模糊过滤
-      orderState: new RegExp(res._data.orderState, "i"),//订单状态模糊过滤
+      orderId: new RegExp(res._data.orderId, "i"),
+      username: new RegExp(res._data.keyWord, "i"),
+      orderState: new RegExp(res._data.orderState, "i"),
     }
   );
 });

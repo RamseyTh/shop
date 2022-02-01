@@ -6,17 +6,17 @@ const {
   DefaultPageConfig,
   ServerApi
 } = config
-export default class BannerBussiness extends Vue {//业务处理
+export default class BannerBussiness extends Vue {
   constructor(_vueComponent) {
     super()
-    BannerModel.getInstance().vueComponent = _vueComponent//取到显示层vue实例
+    BannerModel.getInstance().vueComponent = _vueComponent
     this.initPageConfig()
     this.getBanner()
   }
-  initPageConfig() {//拷贝分页默认配置，并且不更改原常量
+  initPageConfig() {
     BannerModel.getInstance().pageConfig = Clone.shallowClone(DefaultPageConfig)
   }
-  getBanner() {//请求处理，this.$crypto.setCrypto加密
+  getBanner() {
     this.$axios
       .get(ServerApi.shop.shopList, {
         params: {

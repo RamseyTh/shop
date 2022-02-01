@@ -4,10 +4,10 @@
       <input class="mint-checkbox-input" type="checkbox" :checked="isSelAll" />
       <span class="mint-checkbox-core"></span>
     </span>
-    <span>全选({{selCount}})</span>
-    <span @click="delSelShop">删除({{selCount}})</span>
+    <span>Select All({{selCount}})</span>
+    <span @click="delSelShop">Delete({{selCount}})</span>
     <span>
-      <span>￥{{sum}}</span>
+      <span>${{sum}}</span>
       <span class="icon-qianjin iconfont" @click="sendOrder"></span>
     </span>
   </div>

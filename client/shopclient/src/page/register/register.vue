@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Top isBack="true" :title="isReg?'注册':'找回密码'"></Top>
+    <Top isBack="true" :title="isReg?'Register':'Forget password'"></Top>
     <div class="content">
       <RegForm></RegForm>
     </div>

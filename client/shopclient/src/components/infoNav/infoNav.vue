@@ -5,22 +5,22 @@
     </mt-navbar>
     <mt-tab-container v-model="selected">
       <mt-tab-container-item class="doc" id="0">
-        <div>名称：{{shopName}}</div>
-        <div>类型：{{Type[shopType].name}}</div>
-        <div>数量：{{shopNum}}个</div>
+        <div>Name：{{shopName}}</div>
+        <div>Type：{{Type[shopType].name}}</div>
+        <div>Number：{{shopNum}}个</div>
         <div>￥{{shopPrice}}元</div>
       </mt-tab-container-item>
       <mt-tab-container-item class="doc" id="1">
-        <div>净含量/克(g)：{{shopScale}}</div>
-        <div>口味：{{taste}}</div>
-        <div>产地：{{address}}</div>
-        <div>保质期：{{expiryDate}}</div>
-        <div>上架时间：{{time}}</div>
+        <div>Weight/lb：{{shopScale}}</div>
+        <div>Type：{{taste}}</div>
+        <div>Location：{{address}}</div>
+        <div>ExpirationDate：{{expiryDate}}</div>
+        <div>UpTime：{{time}}</div>
       </mt-tab-container-item>
       <mt-tab-container-item id="2">
-        <h3>7天包退</h3>
-        <h3>15天包换</h3>
-        <h3>一年保修</h3>
+        <h3></h3>x
+        <h3></h3>
+        <h3></h3>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>

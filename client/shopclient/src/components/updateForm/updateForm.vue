@@ -3,12 +3,12 @@
     <!-- <img :src="imgPath+userInfo.headPic" alt /> -->
     <UploadPic class="uploadPic" :picFile="userInfo.headPic"></UploadPic>
     <mt-field
-      placeholder="请输入用户名"
+      placeholder="Enter Username"
       :state="userInfo.username.length?'success':'error'"
       v-model="userInfo.username"
     ></mt-field>
     <mt-field
-      placeholder="请输入手机号"
+      placeholder="Enter Phone"
       :state="userInfo.phoneNum.length?'success':'error'"
       v-model="userInfo.phoneNum"
       type="number"
@@ -16,16 +16,16 @@
     <mt-radio v-model="userInfo.sex" :options="sexOption"></mt-radio>
     <mt-button class="btn" @click="selectAddress">{{userInfo.alladdress.join('-')}}</mt-button>
     <mt-field
-      placeholder="请输入详细地址"
+      placeholder="Enter Address"
       :state="userInfo.address.length?'success':'error'"
       v-model="userInfo.address"
     ></mt-field>
     <mt-field
-      placeholder="请输入个性签名"
+      placeholder="Enter Description"
       :state="userInfo.descript.length?'success':'error'"
       v-model="userInfo.descript"
     ></mt-field>
-    <mt-button class="submit" type="primary" @click="submit">修改信息</mt-button>
+    <mt-button class="submit" type="primary" @click="submit">Update Informations</mt-button>
     <div class="shopPicker">
       <mt-popup v-model="popupVisible" position="bottom">
         <mt-picker
@@ -56,15 +56,15 @@ export default {
       selectArea: null,
       sexOption: [//性别配置
         {
-          label: "男",
+          label: "none",
           value: "man"
         },
         {
-          label: "女",
+          label: "none",
           value: "woman"
         }
       ],
-      myAddressSlots: [//省市县联动配置
+      myAddressSlots: [
         {
           flex: 1,
           defaultIndex: 0,

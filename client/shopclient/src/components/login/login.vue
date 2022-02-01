@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <mt-button class="btn" @click="changeLoginType">{{
-      loginType == "psd" ? "切换为验证码登录" : "切换为账号登录"
+      loginType == "psd" ? "Login with Verification Code" : "Login with Username"
     }}</mt-button>
     <div>
       <mt-field
@@ -29,10 +29,10 @@
         }}</mt-button>
       </mt-field>
       <router-link to="/Register">
-        <mt-button class="btn">还没账号？点击注册</mt-button>
+        <mt-button class="btn">Sign up</mt-button>
       </router-link>
-      <mt-button class="btn">找回密码</mt-button>
-      <mt-button class="btn" type="primary" @click="submit">登录</mt-button>
+      <mt-button class="btn">Forget password</mt-button>
+      <mt-button class="btn" type="primary" @click="submit">Login</mt-button>
     </div>
   </div>
 </template>

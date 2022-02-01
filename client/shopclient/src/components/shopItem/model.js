@@ -1,9 +1,9 @@
-export default class ItemModel {//存放可读写商品列表，vue组件实例和默认分页配置
+export default class ItemModel {
   constructor() {
-    this._shopList = []//商品列表
-    this._pageConfig = {}//默认分页配置
+    this._shopList = []
+    this._pageConfig = {}
   }
-  static getInstance() { //单例写法
+  static getInstance() { 
     if (!ItemModel._instance) {
       Object.defineProperty(ItemModel, "_instance", {
         value: new ItemModel()
@@ -19,14 +19,14 @@ export default class ItemModel {//存放可读写商品列表，vue组件实例�
   }
   set pageConfig(val) {
     this._pageConfig = val
-    this._pageConfig.picType = 0//默认商品类型：单个商品
+    this._pageConfig.picType = 0
   }
   get pageConfig() {
     return this._pageConfig
   }
   set shopList(val) {
     this._shopList = val
-    this._vueComponent.list = this._shopList//获取到商品列表后重新渲染
+    this._vueComponent.list = this._shopList
   }
   get shopList() {
     return this._shopList

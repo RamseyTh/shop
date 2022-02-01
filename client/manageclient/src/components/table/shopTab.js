@@ -7,10 +7,10 @@ const { FilePath } = config;
 export default class ShopTable {
   constructor(_this) {
     return [
-      { align: "center", title: "商品名", dataIndex: "shopName", width: 80 },
+      { align: "center", title: "Shop", dataIndex: "shopName", width: 80 },
       {
         align: "center",
-        title: "商品类型",
+        title: "Product Type",
         dataIndex: "shopType",
         width: 50,
         render: (text) => {
@@ -19,7 +19,7 @@ export default class ShopTable {
       },
       {
         align: "center",
-        title: "图片类型",
+        title: "Product Image",
         dataIndex: "picType",
         width: 50,
         render: (text) => {
@@ -65,7 +65,7 @@ export default class ShopTable {
         dataIndex: "shopScale",
         width: 50,
         render: (price) => {
-          return <div>{price + "克"}</div>;
+          return <div>{price + "lb"}</div>;
         },
       },
       {

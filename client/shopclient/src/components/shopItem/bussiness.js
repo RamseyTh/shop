@@ -9,15 +9,15 @@ const {
 export default class ItemBussiness extends Vue {
   constructor(_vueComponent) {
     super()
-    ItemModel.getInstance().vueComponent = _vueComponent//Vue组件实例
+    ItemModel.getInstance().vueComponent = _vueComponent
     this.initPageConfig(_vueComponent.shopType)
     this.getShopItem()
   }
-  initPageConfig(_shopType) {//获取默认分页配置
+  initPageConfig(_shopType) {
     ItemModel.getInstance().pageConfig = Clone.shallowClone(DefaultPageConfig)
     ItemModel.getInstance().pageConfig.shopType = _shopType
   }
-  getShopItem() {//获取商品列表
+  getShopItem() {
     this.$axios
       .get(ServerApi.shop.shopList, {
         params: {
@@ -26,7 +26,7 @@ export default class ItemBussiness extends Vue {
       }).then(res => {
         switch (res.result) {
           case 1:
-            ItemModel.getInstance().shopList = res.data.list//渲染页面
+            ItemModel.getInstance().shopList = res.data.list
             break;
           default:
             break;

@@ -7,7 +7,7 @@
       <ul>
         <li v-for="(item,index) in list" :key="index" @click="clickHandler(item)">
           <img :src="imgPath+item.shopPic" />
-          <span>{{item.shopName}} {{item.shopScale}}克</span>
+          <span>{{item.shopName}} {{item.shopScale}}lb</span>
         </li>
       </ul>
     </div>

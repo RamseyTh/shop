@@ -8,11 +8,11 @@
       <img :src="imgPath+shopPic" alt />
       <Counter></Counter>
       <ul class="info">
-        <li>{{Number(shopNum)>0?'存货 '+shopNum+' 件':'缺货'}}</li>
-        <li>￥{{shopPrice}}</li>
+        <li>{{Number(shopNum)>0?'Stock '+shopNum:'Not in stock'}}</li>
+        <li>${{shopPrice}}</li>
       </ul>
       <InfoNav></InfoNav>
-      <ShopPicker :ShopMaxCount="ShopMaxCount" pickerTitle="商品数量"></ShopPicker>
+      <ShopPicker :ShopMaxCount="ShopMaxCount" pickerTitle="Number"></ShopPicker>
     </div>
   </div>
 </template>
@@ -56,10 +56,10 @@ export default {
     },
     countHandler(res) {
       if (res == "max") {
-        Toast("添加失败，限购9件或库存不足");
+        Toast("Add failed");
         return;
       }
-      Toast("添加成功");
+      Toast("Added");
       this.shopCount = this.shopCar.state.length;
     }
   }

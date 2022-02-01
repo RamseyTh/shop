@@ -9,7 +9,7 @@ export default class Config {
     Config.Agreement + Config.BaseUrl + Config.ServerPort + Config.Path; //服务端静态目录
   static RequestTimeOut = 10 * 1000; //请求超时时间
   static GetCodeTime = 60 * 1000; //邮箱验证码重发时间
-  static CodeText = '获取验证码'; //邮箱验证码按钮文本
+  static CodeText = 'Get code'; //邮箱验证码按钮文本
   static ShopMaxCount = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //每件商品可购买数量（选择器配置）
   static ServerApi = {
     //接口名

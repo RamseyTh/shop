@@ -11,7 +11,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <div className="cardBox">
-        <Card title="登录">
+        <Card title="Login">
           <Form
             name="normal_login"
             className="login-form"
@@ -22,14 +22,14 @@ export default class Login extends React.Component {
               rules={[
                 {
                   required: true,
-                  message: "请输入用户名/邮箱/手机号",
+                  message: "Enter Username",
                 },
               ]}
             >
               <Input
                 className="infoInput"
                 prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="用户名/邮箱/手机号"
+                placeholder="Username"
               />
             </Form.Item>
             <Form.Item
@@ -37,7 +37,7 @@ export default class Login extends React.Component {
               rules={[
                 {
                   required: true,
-                  message: "请输入密码",
+                  message: "Enter Password",
                 },
               ]}
             >
@@ -45,14 +45,14 @@ export default class Login extends React.Component {
                 className="infoInput"
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
-                placeholder="密码"
+                placeholder="Password"
               />
             </Form.Item>
             <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox>10天内免密</Checkbox>
+              <Checkbox>Auto login</Checkbox>
             </Form.Item>
             <a className="login-form-forgot" href="#aaa">
-              忘记密码
+              Forgot password
             </a>
             <Form.Item>
               <Button
@@ -60,9 +60,9 @@ export default class Login extends React.Component {
                 htmlType="submit"
                 className="login-form-button"
               >
-                登录
+                Login
               </Button>
-              或者<a href="#aaa">注册</a>
+              or<a href="#aaa">Register</a>
             </Form.Item>
           </Form>
         </Card>

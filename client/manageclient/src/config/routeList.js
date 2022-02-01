@@ -4,17 +4,17 @@ import Orderlist from "../page/order/orderlist/orderList";
 export default class RouteList {
   static leftMenu = [
     {
-      name: "商品列表",
+      name: "Product List",
       route: "/admin/shopList",
       comp: ShopList,
     },
     {
-      name: "用户列表",
+      name: "User List",
       route: "/admin/userlist",
       comp: UserList,
     },
     {
-      name: "订单列表",
+      name: "Order List",
       route: "/admin/orderlist",
       comp: Orderlist,
     },

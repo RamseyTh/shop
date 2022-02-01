@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Top isBack="true" title="个人信息"></Top>
+    <Top isBack="true" title="Personal Info"></Top>
     <div class="content">
       <UpdateForm></UpdateForm>
     </div>

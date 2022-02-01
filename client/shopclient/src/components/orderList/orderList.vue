@@ -4,11 +4,11 @@
       <div>
         <div>
           <p class="fontcl">
-            下单时间：
+            Order Time：
             <span>{{new Date(orderList.orderTime).toLocaleString()}}</span>
           </p>
           <p class="fontcl">
-            订单编号：
+            Order ID：
             <span>{{orderList.orderId}}</span>
           </p>
         </div>
@@ -36,8 +36,8 @@
       </li>
     </ul>
     <div class="submitOrder">
-      <span>付款合计：￥{{orderList.orderPrice}}</span>
-      <span @click="submitOrder" v-show="orderList.orderState==0">去付款</span>
+      <span>Total：${{orderList.orderPrice}}</span>
+      <span @click="submitOrder" v-show="orderList.orderState==0">Check out</span>
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ export default {
     return {
       orderState: ShopType.orderState,
       imgPath: Config.RequestPath,
-      orderList: [],//订单详情
+      orderList: [],
       orderBussiness: null,
     };
   },
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     submitOrder() {
-      this.orderBussiness.sendOrderPay(this.orderList);//支付
+      this.orderBussiness.sendOrderPay(this.orderList);
     },
   },
 };

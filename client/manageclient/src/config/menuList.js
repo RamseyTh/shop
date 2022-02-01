@@ -1,21 +1,21 @@
 export default class MenuList {
   static leftMenu = [
     {
-      name: "商品管理",
+      name: "Product List",
       list: [
-        { name: "商品列表", route: "/admin/shopList" },
+        { name: "Product List", route: "/admin/shopList" },
       ]
     },
     {
-      name: "用户管理",
+      name: "User List",
       list: [
-        { name: "用户列表", route: "/admin/userlist" },
+        { name: "User List", route: "/admin/userlist" },
       ]
     },
     {
-      name: "订单管理",
+      name: "Order List",
       list: [
-        { name: "订单列表", route: "/admin/orderlist" },
+        { name: "Order List", route: "/admin/orderlist" },
       ]
     }
   ];

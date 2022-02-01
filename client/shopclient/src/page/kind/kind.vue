@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Top title="分类"></Top>
+    <Top title="Category"></Top>
     <div class="content">
       <leftMenu></leftMenu>
       <rightShop></rightShop>

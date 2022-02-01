@@ -29,10 +29,10 @@ export default class ListTable extends React.Component {
       <Select
         placeholder={
           type === "shopType"
-            ? "选择商品类型"
+            ? "Choose Product Type"
             : type === "picType"
-            ? "选择商品图片"
-            : "选择订单状态"
+            ? "Choose Product Image"
+            : "Choose Order State"
         }
         allowClear
         onChange={this.selectSearch.bind(this, type)}
@@ -110,10 +110,10 @@ export default class ListTable extends React.Component {
       <Card
         title={
           this.state.tableType === "user"
-            ? "用户列表"
+            ? "User List"
             : this.state.tableType === "shop"
-            ? "商品列表"
-            : "订单列表"
+            ? "Product List"
+            : "Order List"
         }
       >
         <Row gutter={16}>
@@ -124,10 +124,10 @@ export default class ListTable extends React.Component {
             >
               <PlusOutlined />
               {this.state.tableType === "user"
-                ? "新增用户"
+                ? "Add User"
                 : this.state.tableType === "shop"
-                ? "新增商品"
-                : "新增订单"}
+                ? "Add Product"
+                : "Add Order"}
             </Button>
           </Col>
           <Col span={10}>
@@ -146,12 +146,12 @@ export default class ListTable extends React.Component {
               style={{ float: "right" }}
               placeholder={
                 this.state.tableType === "user"
-                  ? "输入用户名/邮箱"
+                  ? "Enter username"
                   : this.state.tableType === "shop"
-                  ? "输入商品名称"
-                  : "输入用户名"
+                  ? "Enter Product name"
+                  : "Enter username"
               }
-              enterButton="查找"
+              enterButton="Search"
               size="large"
               allowClear
               onSearch={(val) => {
@@ -189,7 +189,7 @@ export default class ListTable extends React.Component {
           pageSize={this.state.pageConfig.pageSize}
           showSizeChanger
           showQuickJumper
-          showTotal={(total) => `共 ${total} 条`}
+          showTotal={(total) => `${total}`}
           onChange={this.changePage}
           onShowSizeChange={this.changePage}
         />

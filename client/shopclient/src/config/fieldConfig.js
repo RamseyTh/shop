@@ -1,16 +1,16 @@
 export default class FieldConfig {
   static LoginFieldConfig = {
     psd: {
-      namelabel: '用户名',
-      codelabel: '密码',
-      nameplaceholder: "请输入用户名/邮箱/手机号",
-      codeplaceholder: '请输入密码'
+      namelabel: 'Username',
+      codelabel: 'Password',
+      nameplaceholder: "Please enter your username",
+      codeplaceholder: 'Please enter your password'
     },
     code: {
-      namelabel: '邮箱',
-      codelabel: '验证码',
-      nameplaceholder: "请输入邮箱",
-      codeplaceholder: '请输入验证码'
+      namelabel: 'Email',
+      codelabel: 'Verification Code',
+      nameplaceholder: "Please enter your email",
+      codeplaceholder: 'Plese enter your verification code'
     }
   };
 

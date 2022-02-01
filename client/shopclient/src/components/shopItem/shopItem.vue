@@ -2,8 +2,8 @@
   <ul class="more">
     <li v-for="(item,index) in list" :key="index" @click="clickHandler(item)">
       <img :src="imgPath+item.shopPic" alt :class="'imgs'+index" />
-      <span>{{item.shopName}} {{item.shopScale}}克</span>
-      <div>￥{{item.shopPrice}}</div>
+      <span>{{item.shopName}} {{item.shopScale}}g</span>
+      <div>${{item.shopPrice}}</div>
     </li>
   </ul>
 </template>

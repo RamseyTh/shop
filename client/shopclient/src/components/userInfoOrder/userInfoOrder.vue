@@ -1,9 +1,9 @@
 <template>
   <ul class="orderList">
-    <li v-if="orderList.length">我的订单</li>
+    <li v-if="orderList.length">My Order</li>
     <li v-for="(item) in orderList" :key="item._id">
       <h4>
-        订单编号：
+        Order ID：
         <span>{{item.orderId}}</span>
         <span
           :class="item.orderState==0?'noPay':item.orderState==4?'isFinish':'isPay'"
@@ -12,18 +12,18 @@
       <div v-for="(shopitem) in item.shopList" :key="shopitem._id">
         <img :src="imgPath+shopitem.shopPic" alt />
         <div>
-          {{shopitem.shopName}} {{shopitem.shopScale+'克'}}
+          {{shopitem.shopName}} {{shopitem.shopScale+'lb'}}
           <br />
-          {{shopitem.shopCount+'份'}} × {{shopitem.shopPrice+'元'}}
+          {{shopitem.shopCount}} × {{shopitem.shopPrice+'$'}}
         </div>
       </div>
       <div>
-        <span>实付：￥{{item.orderPrice}}元</span>
+        <span>Payment：${{item.orderPrice}}</span>
         <mt-button
           class="btn"
           @click="routeToOrder(item.orderId)"
           type="danger"
-        >{{item.orderState==0?'付款':'查看'}}</mt-button>
+        >{{item.orderState==0?'Pay':'Check'}}</mt-button>
       </div>
     </li>
   </ul>

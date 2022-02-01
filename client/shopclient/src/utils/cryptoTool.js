@@ -4,7 +4,7 @@ import config from "../config/config";
 const { CryptoKey } = config;
 class CryptoTool {
   /* Crypto加密方法
-   * @param {object} _data       对用户请求后端的参数进行加密
+   * @param {object} _data       
    */
   static setCrypto(_data) {
     let key = CryptoJS.enc.Utf8.parse(CryptoKey);
@@ -15,7 +15,7 @@ class CryptoTool {
     return encrypted.toString();
   }
    /* Crypto解密方法
-   * @param {string} _token       将秘文解密成对象形式
+   * @param {string} _token       
    */
   static getCrypto(_token) {
     let key = CryptoJS.enc.Utf8.parse(CryptoKey);

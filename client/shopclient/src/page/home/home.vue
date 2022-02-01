@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Top title="零食商贩"></Top>
+    <Top title="The Shop"></Top>
     <div class="content">
       <Banner></Banner>
-      <H2 title="精选主题"></H2>
+      <H2 title="New"></H2>
       <Theme></Theme>
-      <H2 title="最近新品"></H2>
+      <H2 title="Theme"></H2>
       <ShopItem :shopType="shopType"></ShopItem>
     </div>
     <TabBar></TabBar>

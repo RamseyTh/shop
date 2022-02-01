@@ -1,8 +1,8 @@
 export default class Mail {
   static address = [
-    "@qq.com",
     "@gmail.com",
-    "@yahoo.com",
+    "@overlook.com",
+    "@edu.com",
     "@msn.com",
     "@hotmail.com",
     "@aol.com",

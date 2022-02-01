@@ -17,7 +17,7 @@ export default class LoginBussiness extends Vue {
 
     return new Promise((resolve, reject) => {
       if (!this.vueComponent.userInfo.username.length) {
-        Toast('请填写正确的邮箱');
+        Toast('Please enter a valid email address');
         return
       }
       this.$axios
@@ -46,19 +46,19 @@ export default class LoginBussiness extends Vue {
   }
   submitData() {
     if (!this.vueComponent.userInfo.username.length) {
-      Toast('请填写用户名或邮箱');
+      Toast('Please enter Username');
       return
     }
     switch (this.vueComponent.loginType) {
       case 'code':
         if (this.vueComponent.userInfo.mailcode.length != 4) {
-          Toast('请填写正确的验证码');
+          Toast('Please enter the correct verification code');
           return
         }
         break;
       case 'psd':
         if (!this.vueComponent.userInfo.password.length) {
-          Toast('请填写密码');
+          Toast('Please enter Password');
           return
         }
         break;

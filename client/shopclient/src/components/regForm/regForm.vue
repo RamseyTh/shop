@@ -2,18 +2,18 @@
   <div class="login">
     <div>
       <mt-field
-        placeholder="请输入用户名"
+        placeholder="Enter Username"
         :state="userInfo.username.length ? 'success' : 'error'"
         v-model="userInfo.username"
       ></mt-field>
       <mt-field
-        placeholder="请输入密码"
+        placeholder="Enter password"
         :state="userInfo.password.length ? 'success' : 'error'"
         v-model="userInfo.password"
         type="password"
       ></mt-field>
       <mt-field
-        placeholder="请重复输入密码"
+        placeholder="Repeat password"
         :state="
           userInfo.repassword.length && userInfo.password == userInfo.repassword
             ? 'success'
@@ -23,7 +23,7 @@
         type="password"
       ></mt-field>
       <mt-field
-        placeholder="请输入邮箱"
+        placeholder="Enter email"
         v-model="userInfo.mailaddress"
         :state="userInfo.mailaddress.length ? 'success' : 'error'"
       >
@@ -32,7 +32,7 @@
         }}</mt-button>
       </mt-field>
       <mt-field
-        placeholder="请输入验证码"
+        placeholder="Enter Verification Code"
         :state="userInfo.mailcode.length == 4 ? 'success' : 'error'"
         v-model="userInfo.mailcode"
         type="number"
@@ -41,9 +41,9 @@
           codeTime
         }}</mt-button>
       </mt-field>
-      <mt-button class="btn" type="primary" @click="submit">注册</mt-button>
+      <mt-button class="btn" type="primary" @click="submit">Login</mt-button>
       <div class="shopPicker"></div>
-      <ShopPicker :ShopMaxCount="address" pickerTitle="邮箱类型"></ShopPicker>
+      <ShopPicker :ShopMaxCount="address" pickerTitle="Email type"></ShopPicker>
     </div>
   </div>
 </template>
@@ -62,11 +62,10 @@ export default {
   },
   data() {
     return {
-      codeTime: CodeText, //获取验证码按钮显示值
-      address, //邮箱默认地址
-      canGetCode: false, //防止重复点击开关
+      codeTime: CodeText, 
+      address, 
+      canGetCode: false,
       userInfo: {
-        //注册表单默认数据
         username: "",
         password: "",
         repassword: "",
@@ -79,7 +78,7 @@ export default {
   created() {
     this.regBussiness = new RegBussiness(this);
     this.$events.onEvent(EventName.ChangeCount, (_count) => {
-      this.userInfo.mailurl = _count; //切换邮箱地址
+      this.userInfo.mailurl = _count; 
     });
   },
   destroyed() {
@@ -91,16 +90,15 @@ export default {
     },
     getCode() {
       if (this.canGetCode) {
-        //是否允许发送邮箱验证
         return;
       }
       this.regBussiness.sendCode().then((res) => {
-        this.canGetCode = true;//关闭点击开关
+        this.canGetCode = true;
         this.$timeTick.timeTick((state) => {
           this.codeTime = state.content;
           switch (state.res) {
             case 0:
-              this.canGetCode = false;//允许用户点击
+              this.canGetCode = false;
               break;
           }
         });

@@ -9,8 +9,8 @@
         <img :src="imgPath+item.shopPic" alt />
         <div class="shopInfo">
           <div>
-            <span>{{item.shopName}} {{item.shopScale}}克</span>
-            <span>￥{{item.shopPrice}}</span>
+            <span>{{item.shopName}} {{item.shopScale}}lb</span>
+            <span>${{item.shopPrice}}</span>
           </div>
           <div>
             <mt-button class="minus" type="default" @click="minusShopHandler(item)">-</mt-button>
@@ -23,7 +23,7 @@
     </ul>
     <div v-else class="noShop">
       <div class="icon-jiarugouwuche iconfont"></div>
-      <span>购物车为空</span>
+      <span>Empty</span>
     </div>
   </div>
 </template>

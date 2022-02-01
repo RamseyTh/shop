@@ -1,11 +1,11 @@
 <template>
   <ul class="counter">
     <li @click="showPicker">
-      数量
+      Number
       <span>{{shopCount}}</span>
     </li>
     <li @click="addShopCar">
-      加入购物车
+      Add to Cart
       <span class="icon-jiarugouwuche iconfont"></span>
       <transition enter-active-class="animated zoomOutUp slow">
         <span v-show="showAnimate" class="icon-jiarugouwuche iconfont addIcon"></span>
@@ -21,12 +21,12 @@ export default {
   name: "Counter",
   data() {
     return {
-      shopCount: 1,//默认购买商品数量
-      showAnimate: false//动画标签隐藏
+      shopCount: 1,
+      showAnimate: false
     };
   },
   created() {
-    this.$events.onEvent(EventName.ChangeCount, _count => {//添加事件监听，监听商品数量变化
+    this.$events.onEvent(EventName.ChangeCount, _count => {
       this.shopCount = _count;
     });
     this.shopCar = new this.$store.ShopCar();
@@ -39,13 +39,13 @@ export default {
       this.$events.emitEvent(EventName.ShowPicker);
     },
     addShopCar() {
-      this.showAnimate = true;//显示元素
-      setTimeout(() => {//延时的目的是等待动画完成
-        this.shopCar.countShopItem({//缓存添加购物车数据
+      this.showAnimate = true;
+      setTimeout(() => {
+        this.shopCar.countShopItem({
           ...this.$route.query,
           shopCount: this.shopCount
         });
-        this.showAnimate = false;//隐藏元素
+        this.showAnimate = false;
       }, 1000);
     }
   }

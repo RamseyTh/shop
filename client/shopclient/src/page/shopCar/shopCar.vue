@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Top title="购物车"></Top>
+    <Top title="Cart"></Top>
     <div class="content">
       <ShopCarItem></ShopCarItem>
       <ShopCarOrder></ShopCarOrder>

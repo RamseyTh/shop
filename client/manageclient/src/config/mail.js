@@ -1,7 +1,7 @@
 export default class Mail {
   static address = [
     { name: "gmail", mail: "@gmail.com" },
-    { name: "yahoo", mail: "@yahoo.com" },
+    { name: "overlook", mail: "@overlook.com" },
     { name: "msn", mail: "@msn.com" },
     { name: "hotmail", mail: "@hotmail.com" },
     { name: "aol", mail: "@aol.com" },

@@ -9,7 +9,7 @@ export default class OrderBussiness extends Vue {
     this.vueComponent = _vueComponent;
     this._defaultPageConfig = Clone.shallowClone(DefaultPageConfig);
   }
-  getOrderList() {//获取个人订单信息列表
+  getOrderList() {
     this._defaultPageConfig.token = this.$storage.getStorage(StorageName.Token);
     this._defaultPageConfig.orderId = this.vueComponent.$route.query.orderId;
     this.$axios
@@ -29,8 +29,8 @@ export default class OrderBussiness extends Vue {
       });
   }
   sendOrderPay(data) {
-    MessageBox("提示", "本案例仅为参考，未开通支付功能");
-    data.orderState = 1;//修改订单状态为已支付
+    MessageBox("Tip", "No Payment Option available yet");
+    data.orderState = 1;
     data.token = this.$storage.getStorage(StorageName.Token);
     this.$axios
       .post(ServerApi.order.updateOrder, {

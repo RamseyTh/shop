@@ -1,9 +1,9 @@
-export default class BannerModel {//banner数据存取
+export default class BannerModel {
   constructor() {
     this._bannerList = []
     this._pageConfig = {}
   }
-  static getInstance() { //单例写法
+  static getInstance() {
     if (!BannerModel._instance) {
       Object.defineProperty(BannerModel, "_instance", {
         value: new BannerModel()

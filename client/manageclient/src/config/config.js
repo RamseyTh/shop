@@ -4,10 +4,9 @@ export default class Config {
   static ServerUrl = "";
   static ServerPort = ":1024";
   static Path = "/";
-  static CryptoKey = "tokenkey"; //加密信息关键字
+  static CryptoKey = "tokenkey"; //crypto
   static FilePath = this.Agreement + this.BaseUrl + this.ServerPort + this.Path;
   static ServerApi = {
-    //接口名
     token: "user/checkToken",
     user: {
       userLogin: "user/userLogin",
@@ -47,8 +46,8 @@ export default class Config {
     user: {
       sex: "man",
       userType: "user",
-      mailurl: "@qq.com",
-      alladdress: ["江西省", "南昌市", "青云谱区"],
+      mailurl: "@gmail.com",
+      alladdress: ["xx", "xxx", "xxxx"],
     },
     shop: {
       shopType: "0",
@@ -56,9 +55,9 @@ export default class Config {
       shopNum: 100,
       shopPrice: 1,
       shopScale: 100,
-      taste: "酸甜苦辣咸",
-      address: "江西南昌",
-      expiryDate: "180天",
+      taste: "good",
+      address: "somewhere",
+      expiryDate: "180 days",
     },
   };
   static EventName = {

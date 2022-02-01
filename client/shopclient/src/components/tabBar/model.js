@@ -1,21 +1,21 @@
 export default class TableBarModel {
   static MenuList = [{
-      name: "主页",
+      name: "Home",
       path: "/Home",
       icon: "icon-shouye li iconfont"
     },
     {
-      name: "分类",
+      name: "Category",
       path: "/Kind",
       icon: "icon-fenlei li iconfont"
     },
     {
-      name: "购物车",
+      name: "Cart",
       path: "/ShopCar",
       icon: "icon-daohang-gouwuche li iconfont"
     },
     {
-      name: "我的",
+      name: "Account",
       path: "/Info",
       icon: "icon-wode li iconfont"
     }

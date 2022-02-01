@@ -25,7 +25,7 @@ export default {
   created() {},
   methods: {
     exitUser() {
-      MessageBox.confirm("确定退出当前账户?")
+      MessageBox.confirm("Logging out?")
         .then((action) => {
           this.$storage.saveStorage(StorageName.Token, " ");
           this.$events.emitEvent(EventName.IsLogin);
